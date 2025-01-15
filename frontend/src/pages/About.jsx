@@ -6,7 +6,7 @@ import { assets } from '../assets/frontend_assets/assets';
 
 const About = () => {
   return (
-    <>
+    <div>
       <div className='text-2xl text-center pt-8 border-t'>
         <Title text1={"ABOUT"} text2={"US"} />
       </div>
@@ -37,7 +37,7 @@ const About = () => {
         </div>
       </div>
       <NewsletterBox/>
-    </>
+    </div>
 
   )
 }
