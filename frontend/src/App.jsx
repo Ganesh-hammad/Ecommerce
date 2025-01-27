@@ -14,17 +14,20 @@ import Footer from './components/Footer'
 import SearchBar from './components/SearchBar'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import ScrollToTop from './components/ScrollToTop'
+import PrivacyPolicy from './components/PrivacyPolicy'
 const App = () => {
   return (
     <h1 className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] ">
       <ToastContainer theme="dark" />
-
+      <ScrollToTop/>
       <Navbar/>
       <SearchBar/>
       <Routes>
         <Route path='/' element={<Home/>} />
         <Route path='/collection' element={<Collection/>} />
         <Route path='/about' element={<About/>} />
+        <Route path='/privacy' element={<PrivacyPolicy/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/place-order' element={<PlaceOrder/>} />
         <Route path='/product/:productId' element={<Product/>} />

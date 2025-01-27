@@ -1,28 +1,30 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { assets } from '../assets/frontend_assets/assets'
+import { ShopContext } from '../context/ShopContext'
 
 const Footer = () => {
+  const { navigate } = useContext(ShopContext)
   return (
     <>
       <div className='flex flex-col sm:grid grid-cols-[3fr_1fr_1fr] gap-14 my-10 mt-40 text-sm '>
         <div className="">
-          <img src={assets.logo} alt="" className="w-32 mb-5" />
-          <p className="w-full md:w-2/3 text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quos mollitia excepturi amet. Deleniti, unde?</p>
+          <img src={assets.logo}  onClick={() => navigate('/')} alt="" className="w-32 mb-5 cursor-pointer" />
+          <p className="w-full md:w-2/3 text-gray-600">To become your favorite online shopping destination by offering unparalleled quality, convenience, and value. We aim to create a seamless shopping journey that keeps you coming back for more. <br /><br />Thank you for choosing FOREVER. We’re here to make your life easier, one order at a time.</p>
         </div>
         <div>
           <p className="text-xl font-medium mb-5 ">COMPANY</p>
-          <ul className='flex flex-col gap-1 text-gray-600'>
-            <li className="">Home</li>
-            <li className="">About us</li>
-            <li className="">Delivery</li>
-            <li className="">Privacy Policy</li>
+          <ul className='flex flex-col gap-1 text-gray-600 cursor-pointer'>
+            <li onClick={() => navigate('/')} className="">Home</li>
+            <li onClick={() => navigate('/about')} className="">About us</li>
+            <li onClick={() => navigate('/orders')} className="">Delivery</li>
+            <li onClick={() => navigate('/privacy')} className="">Privacy Policy</li>
           </ul>
         </div>
         <div className="">
           <p className="text-xl font-medium mb-5 ">COMPANY</p>
           <ul className='flex flex-col gap-1 text-gray-600'>
             <li className="">+91- 969-144-0772</li>
-            <li className="">contact@gmail.com</li>
+            <li className="">ganeshhammad837@gmail.com</li>
           </ul>
         </div>
       </div>

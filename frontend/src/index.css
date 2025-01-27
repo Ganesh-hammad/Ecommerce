@@ -23,3 +23,6 @@ a.active hr{
     color: white;
   }
 }
+body {
+  padding-top: 5rem; /* Adjust based on the navbar's height */
+}

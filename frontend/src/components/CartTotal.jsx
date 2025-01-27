@@ -27,7 +27,7 @@ const CartTotal = () => {
           <p>
             Total
           </p>
-          <p>{currency} {getCartAmount() === 0 ? 0: getCartAmount() + delivery_fee}.00 </p>
+          <p>{currency} {getCartAmount() === 0 ? 0: getCartAmount() + (getCartAmount() > 0 && getCartAmount() < 500 ? delivery_fee : 0)}.00 </p>
         </div>
       </div>
     </div>

@@ -8,22 +8,26 @@ const Cart = () => {
   const {products,currency, cartItems, updateQuantity, navigate} = useContext(ShopContext);
   const [cartData, setCartData] = useState([]);
   useEffect(()=>{
-   let temData = [];
-   for(const items in cartItems){
-    for(const item in cartItems[items]){
-      if(cartItems[items][item]>0){
-         temData.push({
-          _id: items,
-          size:item,
-          quatity:cartItems[items][item]
-         })
-      }
+    if(products.length > 0){
+      let temData = [];
+      for(const items in cartItems){
+       for(const item in cartItems[items]){
+         if(cartItems[items][item]>0){
+            temData.push({
+             _id: items,
+             size:item,
+             quatity:cartItems[items][item]
+            })
+         }
+       }
+     }
+     if(temData.size !== ""){
+      setCartData(temData);
     }
-  }
-   if(temData.size !== ""){
-     setCartData(temData);
-   }
-  }, [cartItems])
+    }
+   
+
+  }, [cartItems, products])
   return (
     <div className='border-t pt-14'>
       <div className="text-2xl mb-3">

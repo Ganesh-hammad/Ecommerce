@@ -8,12 +8,12 @@ const LatestCollection = () => {
   const [latestProducts, setLatestProducts] = useState([]);
   useEffect(() => {
     setLatestProducts(products.slice(0, 10));
-  }, [])
+  }, [products])
   return (
     <div className='my-10 '>
       <div className="text-center py-8 text-3xl ">
         <Title text1={"LATEST"} text2={"COLLECTION"} />
-        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Labore dignissimos, possimus tenetur architecto expedita quisquam blanditiis! Assumenda dolore quos laborum?
+        <p className="w-3/4 m-auto text-xs sm:text-sm md:text-base text-gray-600 ">Discover the newest additions to FOREVER! Our Latest Collection is here to keep you ahead of the trends and up-to-date with the finest products in the market
         </p>
       </div>
       {/* Rendering Products */}
@@ -27,4 +27,4 @@ const LatestCollection = () => {
   )
 }
 
-export default LatestCollection
+export default LatestCollection;
