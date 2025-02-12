@@ -23,10 +23,6 @@ const loginUser = async (req, res) => {
             return res.json({ success: false, message: "User does not exist" });
         }
 
-        // Ensure the user has a password stored
-        console.log("Password from request:", password);
-console.log("Password from database:", user.password);
-
         if (!user.password) {
             return res.json({ success: false, message: "Password is not set for this user" });
         }
