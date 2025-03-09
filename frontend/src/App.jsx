@@ -18,6 +18,7 @@ import ScrollToTop from './components/ScrollToTop'
 import PrivacyPolicy from './components/PrivacyPolicy'
 const App = () => {
   return (
+    
     <h1 className="px-4 sm:px-[5vw] md:px-[7vw] lg:px-[9vw] ">
       <ToastContainer theme="dark" />
       <ScrollToTop/>
